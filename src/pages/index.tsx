@@ -1,13 +1,19 @@
-import { Head } from "next/document";
 import { CompletedChallends } from "../components/CompletedChallends";
 import { CountDown } from "../components/CountDown";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
+
+import { Head } from "next/document";
+
 import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
   return (
     <div className= {styles.container}  >    
+      <head >
+        <title>Move.it</title>
+      </head>
+
       <ExperienceBar />      
       <section>
         <div>
@@ -20,10 +26,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      <footer>
-        
-      </footer>
     </div>  
   )
 }
