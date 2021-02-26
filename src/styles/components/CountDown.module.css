@@ -57,6 +57,7 @@
     font-weight: 600;
 
     transition: background-color 0.2s;
+    outline: 0;
 }
 
 .countDownButton:hover{
