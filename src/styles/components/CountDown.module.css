@@ -60,8 +60,25 @@
     outline: 0;
 }
 
-.countDownButton:hover{
-    background-color: var(--blue-dark);
+.countDownButton:not(:disabled):hover{
+    background: var(--blue-dark);
 }
+
+.countDownButtonActive{
+    background: var(--white);
+    color: var(--title);
+}
+
+.countDownButtonActive:not(:disabled):hover{
+    background: var(--red);
+    color: var(--white);
+}
+
+.countDownButton:disabled{
+    background: var(--white);
+    color: var(--title);
+    cursor: not-allowed;
+}
+
 
 
