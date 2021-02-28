@@ -5,26 +5,29 @@ import { Profile } from "../components/Profile";
 import { ChallendBox } from "../components/ChallendBox";
 
 import styles from '../styles/pages/Home.module.css';
+import { CountDownProvider } from "../contexts/CountDownContext";
 
 export default function Home() {
   return (
-    <div className= {styles.container}  >    
-      <head >
-        <title>Move.it</title>
-      </head>
+    <CountDownProvider>
+      <div className= {styles.container}  >    
+        <head >
+          <title>Move.it</title>
+        </head>
 
-      <ExperienceBar />      
-      <section>
-        <div>
-          <Profile />
-          <CompletedChallends />
-          <CountDown />
-        </div>
-        <div>
-          <ChallendBox />
+        <ExperienceBar />      
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallends />
+            <CountDown />
+          </div>
+          <div>
+            <ChallendBox />
 
-        </div>
-      </section>
-    </div>  
+          </div>
+        </section>
+      </div> 
+    </CountDownProvider> 
   )
 }
